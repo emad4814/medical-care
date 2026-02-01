@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب جديد - المنصة الطبية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-stethoscope"></i>
+                <span>المنصة الطبية</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> عن المنصة</a></li>
+                <li><a href="services.html"><i class="fas fa-concierge-bell"></i> الخدمات</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                <li><a href="login.html" class="btn-login"><i class="fas fa-sign-in-alt"></i> تسجيل الدخول</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- قسم إنشاء الحساب -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <h1>إنشاء حساب جديد</h1>
+                    <p>انضم إلى منصتنا الطبية واستفد من جميع خدماتنا المميزة</p>
+                </div>
+
+                <!-- خطوات التسجيل -->
+                <div class="registration-steps">
+                    <div class="step active" id="step1">
+                        <div class="step-number">1</div>
+                        <span>المعلومات الشخصية</span>
+                    </div>
+                    <div class="step" id="step2">
+                        <div class="step-number">2</div>
+                        <span>المعلومات الطبية</span>
+                    </div>
+                    <div class="step" id="step3">
+                        <div class="step-number">3</div>
+                        <span>تأكيد الحساب</span>
+                    </div>
+                </div>
+
+                <!-- الخطوة 1: المعلومات الشخصية -->
+                <form id="registerForm" class="auth-form">
+                    <div id="step1Content" class="step-content active">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">الاسم الأول *</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="firstName" name="firstName" required
+                                        placeholder="أدخل الاسم الأول">
+                                </div>
+                                <div class="error-message" id="firstNameError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">اسم العائلة *</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="lastName" name="lastName" required
+                                        placeholder="أدخل اسم العائلة">
+                                </div>
+                                <div class="error-message" id="lastNameError"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني *</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" name="email" required placeholder="example@email.com">
+                            </div>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف *</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" id="phone" name="phone" required placeholder="0XXXXXXXXX">
+                            </div>
+                            <div class="error-message" id="phoneError"></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password">كلمة المرور *</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="password" name="password" required
+                                        placeholder="كلمة مرور قوية">
+                                    <button type="button" class="toggle-password" data-target="password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-strength" id="passwordStrength">
+                                    <div class="strength-bar"></div>
+                                    <span class="strength-text">قوة كلمة المرور: ضعيفة</span>
+                                </div>
+                                <div class="error-message" id="passwordError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirmPassword">تأكيد كلمة المرور *</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="confirmPassword" name="confirmPassword" required
+                                        placeholder="أعد إدخال كلمة المرور">
+                                    <button type="button" class="toggle-password" data-target="confirmPassword">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="error-message" id="confirmPasswordError"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dateOfBirth">تاريخ الميلاد *</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-calendar"></i>
+                                <input type="date" id="dateOfBirth" name="dateOfBirth" required max="2006-01-01">
+                            </div>
+                            <div class="error-message" id="dateOfBirthError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>الجنس *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="male" required>
+                                    <span class="radio-custom"></span>
+                                    <span-m>ذكر</span-m>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="female">
+                                    <span class="radio-custom"></span>
+                                    <span-m>أنثى</span-m>
+                                </label>
+                            </div>
+                            <div class="error-message" id="genderError"></div>
+                        </div>
+
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-secondary" onclick="window.location.href='login.html'">
+                                <i class="fas fa-arrow-right"></i> العودة لتسجيل الدخول
+                            </button>
+                            <button type="button" class="btn btn-primary" id="nextToStep2">
+                                التالي <i class="fas fa-arrow-left"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- الخطوة 2: المعلومات الطبية -->
+                    <div id="step2Content" class="step-content">
+                        <div class="form-group">
+                            <label for="bloodType">فصيلة الدم</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-tint"></i>
+                                <select id="bloodType" name="bloodType">
+                                    <option value="">اختر فصيلة الدم</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                    <option value="unknown">غير معروف</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="height">الطول (سم)</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-ruler-vertical"></i>
+                                <input type="number" id="height" name="height" min="100" max="250"
+                                    placeholder="أدخل الطول بالسنتيمتر">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="weight">الوزن (كجم)</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-weight"></i>
+                                <input type="number" id="weight" name="weight" min="30" max="300"
+                                    placeholder="أدخل الوزن بالكيلوجرام">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="chronicDiseases">الأمراض المزمنة (إن وجدت)</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-file-medical"></i>
+                                <textarea id="chronicDiseases" name="chronicDiseases" rows="3"
+                                    placeholder="اذكر أي أمراض مزمنة مثل: السكري، الضغط، الربو..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="allergies">الحساسية (إن وجدت)</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-allergies"></i>
+                                <textarea id="allergies" name="allergies" rows="2"
+                                    placeholder="اذكر أي حساسية مثل: البنسلين، الغبار، بعض الأطعمة..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="insuranceCompany">شركة التأمين</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-shield-alt"></i>
+                                <select id="insuranceCompany" name="insuranceCompany">
+                                    <option value="">اختر شركة التأمين</option>
+                                    <option value="bupa">بوبا العربية</option>
+                                    <option value="medgulf">المدينة الطبية</option>
+                                    <option value="tawuniya">التعاونية</option>
+                                    <option value="axa">أكسا</option>
+                                    <option value="none">لا يوجد تأمين</option>
+                                    <option value="other">أخرى</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="insuranceNumberGroup" style="display: none;">
+                            <label for="insuranceNumber">رقم بطاقة التأمين</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-id-card"></i>
+                                <input type="text" id="insuranceNumber" name="insuranceNumber"
+                                    placeholder="أدخل رقم بطاقة التأمين">
+                            </div>
+                        </div>
+
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-secondary" id="backToStep1">
+                                <i class="fas fa-arrow-right"></i> السابق
+                            </button>
+                            <button type="button" class="btn btn-primary" id="nextToStep3">
+                                التالي <i class="fas fa-arrow-left"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- الخطوة 3: تأكيد الحساب -->
+                    <div id="step3Content" class="step-content">
+                        <div class="confirmation-section">
+                            <div class="confirmation-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+
+                            <h3>تأكيد المعلومات</h3>
+                            <p>يرجى مراجعة المعلومات التالية قبل إنشاء الحساب:</p>
+
+                            <div class="confirmation-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">الاسم الكامل:</span>
+                                    <span class="detail-value" id="confirmFullName"></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">البريد الإلكتروني:</span>
+                                    <span class="detail-value" id="confirmEmail"></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">رقم الهاتف:</span>
+                                    <span class="detail-value" id="confirmPhone"></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">تاريخ الميلاد:</span>
+                                    <span class="detail-value" id="confirmBirthDate"></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">الجنس:</span>
+                                    <span class="detail-value" id="confirmGender"></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">فصيلة الدم:</span>
+                                    <span class="detail-value" id="confirmBloodType"></span>
+                                </div>
+                            </div>
+
+                            <div class="terms-agreement">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="agreeTerms" required>
+                                    <span class="checkmark"></span>
+                                    <span>أوافق على <a href="terms.html" target="_blank">شروط الاستخدام</a> و <a
+                                            href="privacy.html" target="_blank">سياسة الخصوصية</a> للمنصة الطبية</span>
+                                </label>
+                                <div class="error-message" id="termsError"></div>
+                            </div>
+
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-secondary" id="backToStep2">
+                                    <i class="fas fa-arrow-right"></i> السابق
+                                </button>
+                                <button type="submit" class="btn btn-success" id="createAccountBtn">
+                                    <i class="fas fa-user-plus"></i> إنشاء الحساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- قسم تسجيل الدخول بالفعل -->
+                <div class="auth-footer">
+                    <p>لديك حساب بالفعل؟ <a href="login.html">سجل الدخول الآن</a></p>
+                    <p><a href="index.html"><i class="fas fa-arrow-right"></i> العودة للصفحة الرئيسية</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© المنصة الطبية.</p>
+                <p>© 2026 Designed By Emad Multimedia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- نافذة التأكيد -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>تم إنشاء الحساب بنجاح!</h3>
+                <p id="successMessage">تم إنشاء حسابك بنجاح. يمكنك الآن تسجيل الدخول للاستفادة من خدماتنا.</p>
+                <div class="modal-actions">
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="fas fa-sign-in-alt"></i> تسجيل الدخول الآن
+                    </a>
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fas fa-home"></i> العودة للرئيسية
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/register.js"></script>
+    <script>
+        // تهيئة القائمة المتحركة
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function () {
+                    navLinks.classList.toggle('active');
+                    menuToggle.innerHTML = navLinks.classList.contains('active')
+                        ? '<i class="fas fa-times"></i>'
+                        : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // التحقق من وجود مستخدم مسجل بالفعل
+            const storedUser = localStorage.getItem('medicalPlatformUser');
+            if (storedUser) {
+                window.location.href = 'dashboard.html';
+            }
+
+            // تعيين الحد الأدنى للتاريخ (يجب أن يكون المستخدم عمره 18 سنة على الأقل)
+            const today = new Date();
+            const minDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+            document.getElementById('dateOfBirth').max = minDate.toISOString().split('T')[0];
+        });
+    </script>
+</body>
+
+</html>

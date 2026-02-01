@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنصة الطبية - الصحة في متناول يديك</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-stethoscope"></i>
+                <span>المنصة الطبية</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> عن المنصة</a></li>
+                <li><a href="services.html"><i class="fas fa-concierge-bell"></i> الخدمات</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                <li><a href="login.html" class="btn-login"><i class="fas fa-sign-in-alt"></i> تسجيل الدخول</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- قسم البطل -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>الرعاية الصحية المثالية في متناول يديك</h1>
+                <p>نوفر لك أفضل الخدمات الطبية مع أطباء متخصصين وعيادات مجهزة بأحدث التقنيات الطبية</p>
+                <div class="hero-buttons">
+                    <a href="#departments" class="btn btn-primary">اكتشف خدماتنا</a>
+                    <a href="login.html" class="btn btn-secondary">احجز موعد الآن</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/images/img-top.jfif" alt="الرعاية الصحية">
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المميزات -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">لماذا تختار منصتنا؟</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>حجز مواعيد سهل</h3>
+                    <p>احجز موعدك مع أفضل الأطباء في أي وقت ومن أي مكان</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>عيادات متعددة</h3>
+                    <p>شبكة واسعة من العيادات المتعاقدة في مختلف المدن</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>أطباء معتمدون</h3>
+                    <p>فريق من الأطباء المتخصصين والحاصلين على أعلى الشهادات</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>دعم فني 24/7</h3>
+                    <p>خدمة عملاء متاحة على مدار الساعة لمساعدتك في أي استفسار</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأقسام الطبية -->
+    <section class="departments" id="departments">
+        <div class="container">
+            <h2 class="section-title">الأقسام الطبية</h2>
+            <div class="departments-grid" id="departmentsGrid">
+                <!-- سيتم ملؤها بواسطة JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الإحصائيات -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-hospital"></i>
+                    <h3 id="clinicsCount">0</h3>
+                    <p>عيادة متعاقدة</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-user-md"></i>
+                    <h3 id="doctorsCount">0</h3>
+                    <p>طبيب متخصص</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-user-check"></i>
+                    <h3 id="patientsCount">0</h3>
+                    <p>مريض راضٍ</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3 id="appointmentsCount">0</h3>
+                    <p>حجز شهري</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الاتصال السريع -->
+    <section class="quick-contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>هل تحتاج مساعدة؟</h2>
+                <p>فريق الدعم الفني متاح على مدار الساعة للإجابة على استفساراتك</p>
+                <a href="contact.html" class="btn btn-primary">
+                    <i class="fas fa-phone-alt"></i> اتصل بنا الآن
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>المنصة الطبية</h3>
+                    <p>منصة رائدة في تقديم الخدمات الطبية الإلكترونية، نسعى لتوفير أفضل تجربة رعاية صحية للمرضى.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">عن المنصة</a></li>
+                        <li><a href="services.html">الخدمات</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>الخدمات</h3>
+                    <ul>
+                        <li><a href="services.html">حجز المواعيد</a></li>
+                        <li><a href="services.html">استشارات عن بعد</a></li>
+                        <li><a href="services.html">الكشف المنزلي</a></li>
+                        <li><a href="services.html">تحاليل طبية</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>معلومات الاتصال</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> جمهورية مصر االعربية ، القاهرة</li>
+                        <li><i class="fas fa-phone"></i> 010123456789</li>
+                        <li><i class="fas fa-envelope"></i> info@medical-egycare.com</li>
+                        <hr class="hr-1">
+                        <li><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</li>
+                        <li><i class="fas fa-phone"></i> 0112345678</li>
+                        <li><i class="fas fa-envelope"></i> info@medical-ksacare.com</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© المنصة الطبية.</p>
+                <p>© 2026 Designed By Emad Multimedia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- نافذة تسجيل الدخول -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <h2>تسجيل الدخول</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">اسم المستخدم</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">تسجيل الدخول</button>
+                <p class="form-footer">ليس لديك حساب؟ <a href="register.html">سجل الآن</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
