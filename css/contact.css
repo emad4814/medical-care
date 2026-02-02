@@ -26,6 +26,7 @@ body {
     background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
     border-radius: 20px;
     margin-bottom: 40px;
+    margin-top: 100px;
     color: white;
     position: relative;
     overflow: hidden;
@@ -821,4 +822,5 @@ body {
     .section-title {
         font-size: 1.8rem;
     }
+
 }
