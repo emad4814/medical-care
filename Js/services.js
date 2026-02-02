@@ -38,7 +38,7 @@ function loadServices() {
             price: '150 ريال',
             oldPrice: '200 ريال',
             badge: 'الأكثر طلباً',
-            image: serviceImages[1]
+            image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=400&fit=crop&q=80'
         },
         {
             id: 2,
@@ -1205,3 +1205,4 @@ window.bookService = bookService;
 window.closeBookingModal = closeBookingModal;
 
 window.printBooking = printBooking;
+
