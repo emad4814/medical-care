@@ -222,10 +222,32 @@
     <script src="./js/jquery-3.7.1.min.js"></script>
      <script src="./js/main.js"></script>
     <script src="./js/data.js"></script>
+    <script src="js/services.js"></script>
+
+    <script>
+        // تهيئة القائمة المتحركة
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function () {
+                    navLinks.classList.toggle('active');
+                    menuToggle.innerHTML = navLinks.classList.contains('active')
+                        ? '<i class="fas fa-times"></i>'
+                        : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // تهيئة صفحة الخدمات
+            initializeServicesPage();
+        });
+    </script>
 </body>
 
 
 </html>
+
 
 
 
