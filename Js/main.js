@@ -273,23 +273,25 @@ function showNotification(message, type = 'info') {
 // تهيئة عداد الإحصائيات
 function initializeStatsCounter() {
     const counters = document.querySelectorAll('.stat-item h3');
-    const speed = 200; // السرعة بالمللي ثانية
+    const speed = 200; // سرعة العد
 
     counters.forEach(counter => {
         const updateCount = () => {
             const target = parseInt(counter.getAttribute('data-target'));
-            const count = parseInt(counter.innerText);
-            const increment = target / speed;
+            let count = parseInt(counter.innerText.replace(/,/g, ''));
+            const increment = Math.ceil(target / speed);
 
             if (count < target) {
-                counter.innerText = Math.ceil(count + increment);
-                setTimeout(updateCount, 1);
+                count += increment;
+                if (count > target) count = target;
+                counter.innerText = count.toLocaleString();
+                setTimeout(updateCount, 20);
             } else {
                 counter.innerText = target.toLocaleString();
             }
         };
 
-        // تعيين القيم المستهدفة
+        // تحديد القيمة المستهدفة
         const statId = counter.parentElement.querySelector('p').textContent;
         let targetValue = 0;
 
@@ -301,19 +303,25 @@ function initializeStatsCounter() {
         counter.setAttribute('data-target', targetValue);
         counter.innerText = '0';
 
-        // بدء العد عند التمرير
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    updateCount();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
+        // إذا العنصر ظاهر على الشاشة، ابدأ العد مباشرة
+        if (counter.getBoundingClientRect().top < window.innerHeight) {
+            updateCount();
+        } else {
+            // أو استخدم IntersectionObserver عند التمرير
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        updateCount();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
 
-        observer.observe(counter);
+            observer.observe(counter);
+        }
     });
 }
+
 
 // تحميل الأقسام الطبية
 function loadDepartments() {
@@ -417,4 +425,5 @@ function logout() {
     setTimeout(() => {
         window.location.href = 'index.html';
     }, 1500);
+
 }
