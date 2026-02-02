@@ -21,7 +21,7 @@ body {
 
 /* الهيدر */
 .contact-header {
-    margin-top: 100px;
+    margin-top: 120px;
     text-align: center;
     padding: 60px 20px;
     background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
@@ -532,4 +532,5 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #0d47a1;
+
 }
