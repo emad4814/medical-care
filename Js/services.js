@@ -9,16 +9,21 @@ function initializeServicesPage() {
 
 // تحميل الخدمات
 // تحميل الخدمات مع صور من HTML
+// تحميل الخدمات بعد اكتمال تحميل الصفحة
+document.addEventListener('DOMContentLoaded', loadServices);
+
 function loadServices() {
     const servicesGrid = document.getElementById('servicesGrid');
     if (!servicesGrid) return;
 
-    // الحصول على الصور من HTML
+    // جلب الصور المخفية من HTML
     const serviceImages = {};
     for (let i = 1; i <= 6; i++) {
         const imgElement = document.getElementById(`service${i}-img`);
         if (imgElement) {
             serviceImages[i] = imgElement.src;
+        } else {
+            console.warn(`Image service${i}-img not found`);
         }
     }
 
@@ -98,11 +103,13 @@ function loadServices() {
     ];
 
     servicesGrid.innerHTML = '';
+
     services.forEach(service => {
         const serviceCard = createServiceCard(service);
         servicesGrid.appendChild(serviceCard);
     });
 }
+
 
 // إنشاء بطاقة خدمة
 function createServiceCard(service) {
@@ -1196,4 +1203,5 @@ function printBooking() {
 // تصدير الدوال للاستخدام العالمي
 window.bookService = bookService;
 window.closeBookingModal = closeBookingModal;
+
 window.printBooking = printBooking;
