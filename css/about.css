@@ -36,6 +36,8 @@ body {
     padding: 60px 20px;
     background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
     border-radius: 20px;
+        margin-top: 100px;
+
     margin-bottom: 40px;
     position: relative;
     overflow: hidden;
@@ -719,4 +721,5 @@ body {
     color: #3498db;
     text-decoration: none;
     font-weight: 600;
+
 }
