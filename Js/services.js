@@ -1206,3 +1206,12 @@ window.closeBookingModal = closeBookingModal;
 
 window.printBooking = printBooking;
 
+
+document.addEventListener('DOMContentLoaded', function () {
+    if (typeof appData !== 'undefined' && appData.departments) {
+        loadDepartments();
+    }
+});
+
+
+
