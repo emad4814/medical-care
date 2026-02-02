@@ -321,3 +321,21 @@ function showNotification(message, type = 'info') {
     setTimeout(() => note.classList.add('show'), 50);
     setTimeout(() => note.remove(), 4000);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    loadData();
+    setupEventListeners();
+
+    // تحميل الأقسام فقط لو الصفحة فيها القسم
+    if (document.getElementById('departmentsGrid')) {
+        loadDepartments();
+    }
+
+    // تشغيل عداد الإحصائيات فقط لو موجود
+    if (document.querySelector('.stat-item')) {
+        initializeStatsCounter();
+    }
+
+});
+
