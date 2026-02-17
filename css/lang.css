@@ -1,0 +1,385 @@
+/* ===============================
+   GLOBAL DIRECTION
+================================ */
+
+/* ===============================
+   LANGUAGE DROPDOWN
+================================ */
+html {
+    direction: ltr;
+}
+
+html[lang="ar"] {
+    direction: rtl;
+}
+
+
+
+
+.lang-dropdown {
+    position: relative;
+    margin-inline-start: 20px;
+    font-family: inherit;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.25s ease;
+}
+
+.lang-btn i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: #f5f5f5;
+}
+
+/* rotate arrow */
+.lang-dropdown.active .lang-btn i {
+    transform: rotate(180deg);
+}
+
+.lang-btn:hover {
+    background: #f5f5f5;
+}
+
+.lang-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    inset-inline-end: 0;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    min-width: 160px;
+    display: none;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+    pointer-events: none;
+    transition: all 0.25s ease;
+}
+
+.lang-dropdown.active .lang-menu {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+
+.lang-menu li {
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.25s ease;
+    white-space: nowrap;
+}
+
+.lang-menu li:hover {
+    background: #f0f4ff;
+}
+
+/* show menu */
+.lang-dropdown.active .lang-menu {
+    display: block;
+}
+
+/* RTL support */
+html[dir="rtl"] .lang-menu {
+    inset-inline-start: 0;
+    inset-inline-end: auto;
+}
+
+
+
+/*=---------------------=*/
+html {
+    direction: ltr;
+}
+
+html[dir="rtl"] {
+    direction: rtl;
+}
+
+/* ===============================
+   TEXT ALIGNMENT (SMART)
+================================ */
+
+body,
+input,
+label,
+textarea {
+    text-align: start;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+
+nav ul {
+    display: flex;
+}
+
+html[dir="ltl"] nav ul {
+    flex-direction: row-reverse;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* ===== Footer titles ===== */
+
+.footer-col h3 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* underline (RTL/LTR smart) */
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    inset-inline-start: 0;
+    width: 50px;
+    height: 3px;
+    background: #3498db;
+}
+
+/* ===== Footer text ===== */
+
+.footer-col p {
+    color: #bdc3c7;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* ===== Footer lists ===== */
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* hover direction smart */
+.footer-col ul li a:hover {
+    color: #3498db;
+    padding-inline-start: 5px;
+}
+
+/* icons spacing */
+.footer-col ul li i {
+    margin-inline-end: 8px;
+}
+
+/* ===============================
+   CONTACT INFO
+================================ */
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-direction: row;
+}
+
+/* لو اللغة عربية */
+html[dir="rtl"] .contact-info li {
+    flex-direction: row-reverse;
+}
+
+.contact-info i {
+    color: #3498db;
+}
+
+/* ===============================
+   SOCIAL LINKS
+================================ */
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+html[dir="rtl"] .social-links {
+    flex-direction: row-reverse;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: #34495e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #3498db;
+    transform: translateY(-3px);
+}
+
+/* ===============================
+   FOOTER BOTTOM
+================================ */
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #34495e;
+    color: #bdc3c7;
+    font-size: 0.9rem;
+}
+
+/* ===============================
+   HR
+================================ */
+
+.hr-1 {
+    margin: 15px 0;
+}
+
+/* ===============================
+   MODAL
+================================ */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* close button smart */
+.close-modal {
+    position: absolute;
+    top: 15px;
+    inset-inline-end: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #7f8c8d;
+}
+
+.modal-content h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* ===============================
+   FORM
+================================ */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Cairo', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #7f8c8d;
+}
+
+.form-footer a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}

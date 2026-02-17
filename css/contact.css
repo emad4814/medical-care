@@ -1,0 +1,535 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    direction: rtl;
+}
+
+
+.contact-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* الهيدر */
+.contact-header {
+    margin-top: 100px;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-header::before {
+    content: "✆";
+    font-size: 150px;
+    position: absolute;
+    opacity: 0.1;
+    right: -30px;
+    top: -30px;
+    transform: rotate(15deg);
+}
+
+.contact-header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.contact-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: #4fc3f7;
+    border-radius: 2px;
+}
+
+.contact-header p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 20px auto;
+    opacity: 0.9;
+}
+
+/* قسم المقرات */
+.offices-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.office-card {
+    background: white;
+    padding: 35px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-top: 4px solid;
+}
+
+.office-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.office-card.cairo {
+    border-top-color: #2196f3;
+}
+
+.office-card.riyadh {
+    border-top-color: #4caf50;
+}
+
+.office-card h2 {
+    color: #1a237e;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.office-card h2 i {
+    color: #e91e63;
+}
+
+.office-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.office-card.cairo .office-icon {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+}
+
+.office-card.riyadh .office-icon {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+
+.office-icon i {
+    font-size: 25px;
+    color: #1a237e;
+}
+
+.contact-details {
+    margin-top: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 18px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.contact-item i {
+    width: 24px;
+    color: #2196f3;
+    margin-left: 12px;
+    margin-top: 3px;
+    font-size: 1.1rem;
+}
+
+.contact-item div {
+    flex: 1;
+}
+
+.contact-item h4 {
+    color: #0d47a1;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.contact-item p {
+    color: #546e7a;
+}
+
+.contact-item a {
+    color: #2196f3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* قسم ساعات العمل */
+.working-hours {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-right: 5px solid #ff9800;
+}
+
+.working-hours h2 {
+    color: #1a237e;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.working-hours h2 i {
+    color: #ff9800;
+}
+
+.hours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.hour-item {
+    background: #fff8e1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hour-item h4 {
+    color: #ff6f00;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.hour-item p {
+    color: #5d4037;
+    font-weight: 500;
+}
+
+.emergency-note {
+    background: #ffebee;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+    border-right: 4px solid #f44336;
+}
+
+.emergency-note h4 {
+    color: #c62828;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* قسم نموذج الاتصال */
+.contact-form-section {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form-section h2 {
+    color: #1a237e;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-form-section h2 i {
+    color: #9c27b0;
+}
+
+.form-description {
+    color: #546e7a;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: #1a237e;
+    margin-bottom: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-group label i {
+    color: #2196f3;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 15px;
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2196f3;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #2196f3 0%, #0d47a1 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(33, 150, 243, 0.3);
+    background: linear-gradient(135deg, #0d47a1 0%, #2196f3 100%);
+}
+
+/* قسم الخدمات */
+.services-section {
+    margin-bottom: 50px;
+}
+
+.services-section h2 {
+    color: #1a237e;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: #2196f3;
+    margin-bottom: 15px;
+}
+
+.service-card h4 {
+    color: #1a237e;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #546e7a;
+    font-size: 0.95rem;
+}
+
+
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #7f8c8d;
+}
+
+.modal-content h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Cairo', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 992px) {
+    .contact-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-header p {
+        font-size: 1.1rem;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-page {
+        padding: 15px;
+    }
+
+    .contact-header,
+    .office-card,
+    .working-hours,
+    .contact-form-section,
+    .contact-footer {
+        padding: 30px 20px;
+    }
+
+    .contact-header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem !important;
+    }
+
+    .offices-section {
+        grid-template-columns: 1fr;
+    }
+
+    .hours-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+    }
+}
+
+/* تخصيص شريط التمرير */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2196f3;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0d47a1;
+}
