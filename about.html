@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنصة الطبية - الصحة في متناول يديك</title>
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- شريط التنقل -->
+
+    <body class="page-about">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-stethoscope"></i>
+                    <span data-i18n="head-name">المنصة الطبية</span>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" data-i18n="nav_home"><i class="fas fa-home"></i> الرئيسية</a>
+                    </li>
+                    <li><a href="about.html" data-i18n="nav_about"><i class="fas fa-info-circle"></i> عن المنصة</a></li>
+                    <li><a href="services.html" data-i18n="nav_services"><i class="fas fa-concierge-bell"></i>
+                            الخدمات</a>
+                    </li>
+                    <li><a href="contact.html" data-i18n="nav_contact"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                    <li><a href="login.html" class="btn-login" data-i18n="nav_login"><i class="fas fa-sign-in-alt"></i>
+                            تسجيل الدخول</a></li>
+                </ul>
+                <div class="lang-dropdown">
+                    <button class="lang-btn">
+                        🌐 <span id="current-lang">AR</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <ul class="lang-menu">
+                        <li onclick="setLanguage('ar')">🇪🇬 العربية</li>
+                        <li onclick="setLanguage('en')">🇺🇸 English</li>
+                        <li onclick="setLanguage('fr')">🇫🇷 Français</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </nav>
+
+
+        <section class="about-us medical-platform">
+            <div class="hero-section">
+                <h1 data-i18n="head-name" class="main-title">المنصة <span class="brand-name"></span> الطبية</h1>
+                <p data-i18n="tagline" class="tagline">نحو مستقبل أكثر صحة ووعياً.. رؤية طبية رقمية متكاملة تضع راحة
+                    المريض
+                    وتمكين الطبيب في قلب
+                    اهتماماتنا.</p>
+            </div>
+
+            <!-- القسم 2: قصتنا وبدايتنا -->
+            <div class="our-story-section">
+                <h2 data-i18n="our-story-title"><i class="icon-heartbeat"></i> قصتنا: لماذا وجدنا؟</h2>
+                <p data-i18n="our-story-content">انبثقت فكرة <strong>المنصة الطبية</strong> من واقع ملاحظة هوة كبيرة بين
+                    التطور التكنولوجي السريع وقطاع
+                    الخدمات الصحية في عالمنا العربي. لاحظ مؤسسونا - وهم مجموعة من الأطباء والمهندسين - معاناة المرضى في
+                    الحصول على استشارات موثوقة بسهولة، وصعوبة متابعة الحالات المزمنة، وتحديات التنظيم التي تواجه
+                    العيادات
+                    والممارسين الصحيين.</p>
+                <p data-i18n="our-story-content-2">لذلك، قررنا في عام <strong>2015</strong> بناء جسر رقمي يربط جميع
+                    أطراف
+                    المنظومة
+                    الصحية: <span class="highlight">المريض، الطبيب، الصيدلي، والمستشفى</span>، في مكان واحد آمن وسهل
+                    الاستخدام.</p>
+            </div>
+
+            <!-- القسم 3: مهمتنا، رؤيتنا، قيمنا -->
+            <div class="mvp-section">
+                <div class="mvp-card mission">
+                    <div class="icon-wrapper"><i class="icon-stethoscope"></i></div>
+                    <h3 data-i18n="mission-title">مهمتنا</h3>
+                    <p data-i18n="mission-content">تقديم حلول رقمية طبية شاملة وموثوقة، تعمل على <strong>تبسيط الرعاية
+                            الصحية</strong>، و<strong>تمكين
+                            الأطباء</strong> بأدوات فعالة، و<strong>تمكين المرضى</strong> بالمعلومات والمتابعة المستمرة，
+                        و<strong>رفع كفاءة المؤسسات الصحية</strong>، كل ذلك مع الحفاظ على أعلى معايير الخصوصية والأمان.
+                    </p>
+                </div>
+
+                <div class="mvp-card vision">
+                    <div class="icon-wrapper"><i class="icon-eye"></i></div>
+                    <h3 data-i18n="vision-title">رؤيتنا</h3>
+                    <p data-i18n="vision-content">أن نكون <strong>المنصة الطبية الرقمية الرائدة والمفضلة</strong> في
+                        المنطقة
+                        العربية، التي يعتمد عليها
+                        ملايين الأشخاص والمؤسسات للحصول على رعاية صحية أفضل وأكثر ذكاءً، مما يساهم في خلق مجتمع أكثر
+                        وعياً
+                        وصحة.</p>
+                </div>
+
+                <div class="mvp-card values">
+                    <div class="icon-wrapper"><i class="icon-shield-alt"></i></div>
+                    <h3 data-i18n="values-title">قيمنا الأساسية</h3>
+                    <ul>
+                        <li data-i18n="value-1"><strong>الثقة والسرية:</strong> حماية بيانات المستخدمين هي خط أحمر غير
+                            قابل
+                            للمساومة.</li>
+                        <li data-i18n="value-2"><strong>الدقة العلمية:</strong> كل محتوى طبي يمر على مراجعة متخصصين
+                            معتمدين.
+                        </li>
+                        <li data-i18n="value-3"><strong>التعاطف الإنساني:</strong> نضع الإنسان قبل التقنية في كل قرار
+                            نتخذه.
+                        </li>
+                        <li data-i18n="value-4"><strong>الابتكار المستمر:</strong> نطور أدواتنا باستمرار لتلبية
+                            الاحتياجات
+                            المتغيرة.</li>
+                        <li data-i18n="value-5"><strong>الشراكة مع المجتمع الطبي:</strong> نحن جسر داعم للأطباء، ولسنا
+                            بديلاً عنهم.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- القسم 4: ما الذي تقدمه المنصة؟ (القيمة المضافة) -->
+            <div class="what-we-offer">
+                <h2 data-i18n="what-we-offer-title"><i class="icon-check-circle"></i> المنصة المتكاملة التي نبنيها</h2>
+                <div class="offerings-grid">
+                    <div class="offering-card">
+                        <h4 data-i18n="offering-card-1-title">👨‍⚕️ للأطباء والممارسين</h4>
+                        <p data-i18n="offering-card-1-content">جدولة ذكية، إدارة الملفات الإلكترونية (EHR)، أدوات
+                            التشخيص
+                            المساعد، التواصل مع المرضى، وإدارة
+                            العيادة رقمياً.</p>
+                    </div>
+                    <div class="offering-card">
+                        <h4 data-i18n="offering-card-2-title">🧑‍🤝‍🧑 للمرضى والمتابعين</h4>
+                        <p data-i18n="offering-card-2-content">حجز مواعيد أونلاين، سجلات صحية شخصية، استشارات افتراضية
+                            آمنة،
+                            متابعة الحالات المزمنة، وتذكير
+                            بالدواء والمواعيد.</p>
+                    </div>
+                    <div class="offering-card">
+                        <h4 data-i18n="offering-card-3-title">🏥 للمستشفيات والمؤسسات</h4>
+                        <p data-i18n="offering-card-3-content">أنظمة إدارة المراكز الطبية المتكاملة، ربط الفروع، تحليلات
+                            وأدوات لتحسين الكفاءة التشغيلية وجودة
+                            الخدمة.</p>
+                    </div>
+                    <div class="offering-card">
+                        <h4 data-i18n="offering-card-4-title">💊 للصيدليات والخدمات المساندة</h4>
+                        <p data-i18n="offering-card-4-content">تكامل مع وصفات الأطباء الإلكترونية، إدارة المخزون، وتوصيل
+                            الأدوية.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- القسم 5: الفريق (اختياري) -->
+            <div class="team-section">
+                <h2 data-i18n="team-section-title"><i class="icon-users"></i> العقول والقلوب التي تقف وراء المنصة</h2>
+                <p data-i18n="team-section-content">يجمع فريق <strong>المنصة الطبية</strong> بين الخبرة العميقة في
+                    <strong>الطب البشري</strong>،
+                    و<strong>هندسة البرمجيات</strong>، و<strong>إدارة البيانات</strong>، و<strong>تجربة
+                        المستخدم</strong>.
+                    نحن نؤمن بأن الحل التقني الناجح في المجال الطبي يجب أن يصممه أطباء مع مهندسين، لضمان الفائدة العملية
+                    والأمان معاً.
+                </p>
+                <!-- يمكن إضافة صور وأسماء الفريق المؤسس أو الاستشاريين هنا -->
+            </div>
+
+            <!-- القسم 6: التعهد والأمان -->
+            <div class="pledge-section">
+                <h2 data-i18n="pledge-section-title"><i class="icoh2handshake"></i> تعهدنا تجاهكم</h2>
+                <p data-i18n="pledge-section-content">نحن لا نقدم مجرد تطبيق أو موقع ويب. نقدم <strong>شراكة صحية
+                        رقيمة</strong>. نلتزم بأن تكون منصتنا:
+
+
+                <p data-i18n="pledge-safe">✅ آمنة: مشفرة بالكامل وملتزمة بأعلى معايير الخصوصية العالمية (مثل
+                    HIPAA/GDPR).</p>
+                <p data-i18n="pledge-reliable">✅موثوقة: المعلومات الطبية دقيقة وتمت مراجعتها.</p>
+                <p data-i18n="pledge-easy">✅ سهلة: واجهة بسيطة تلائم جميع الفئات العمرية.</p>
+                <p data-i18n="pledge-supportive">✅ داعمة: فريق دعم فني على مدار الساعة.</p>
+
+            </div>
+
+            <!-- القسم 7: الدعوة للعمل -->
+            <div class="cta-final">
+                <h2 data-i18n="cta-final-title">انضم إلى رحلتنا نحو صحة أفضل</h2>
+                <p data-i18n="cta-final-content">سواء كنت مريضاً يبحث عن راحة البال، أو طبيباً يريد تطوير عيادته، أو
+                    مؤسسة
+                    تسعى للتحول الرقمي، فإن
+                    <strong>[المنصة الطبية]</strong> هنا من أجلك.
+                </p>
+                <div class="cta-buttons">
+                    <a href="login.html" class="btn btn-primary" data-i18n="cta-final-button-1">سجل حسابك المجاني
+                        الآن</a>
+                    <a href="services.html" class="btn btn-secondary" data-i18n="cta-final-button-2">تحدث مع
+                        مستشارنا</a>
+                </div>
+                <p class="small-note" data-i18n="cta-final-note">لديك أسئلة تقنية أو طبية؟ <a href="/faq">راجع الأسئلة
+                        الشائعة</a> أو <a href="/contact">اتصل بفريق الدعم</a>.</p>
+            </div>
+        </section>
+
+        <!-- الفوتر -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3 data-i18n="footer_about_title">المنصة الطبية</h3>
+                        <p data-i18n="footer_about_desc">منصة رائدة في تقديم الخدمات الطبية الإلكترونية، نسعى لتوفير
+                            أفضل
+                            تجربة
+                            رعاية صحية للمرضى.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3 data-i18n="footer_quick_links">روابط سريعة</h3>
+                        <ul>
+                            <li><a href="index.html" data-i18n="nav_home">الرئيسية</a></li>
+                            <li><a href="about.html" data-i18n="nav_about">عن المنصة</a></li>
+                            <li><a href="services.html" data-i18n="nav_services">الخدمات</a></li>
+                            <li><a href="contact.html" data-i18n="nav_contact">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3 data-i18n="footer_services">الخدمات</h3>
+                        <ul>
+                            <li><a href="services.html" data-i18n="footer_service_booking">حجز المواعيد</a></li>
+                            <li><a href="services.html" data-i18n="footer_service_consultation">استشارات عن بعد</a></li>
+                            <li><a href="services.html" data-i18n="footer_service_home_visit">الكشف المنزلي</a></li>
+                            <li><a href="services.html" data-i18n="footer_service_labs">تحاليل طبية</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3 data-i18n="footer_contact_info">معلومات الاتصال</h3>
+                        <ul class="contact-info">
+                            <li data-i18n="footer_contact_cairo"><i class="fas fa-map-marker-alt"></i> القاهرة ، جمهورية
+                                مصر
+                                العربية</li>
+                            <li data-i18n="footer_phone_cairo"><i class="fas fa-phone"></i> 010123456789</li>
+                            <li data-i18n="footer_email_cairo"><i class="fas fa-envelope"></i> cairo@medical.com</li>
+                            <hr class="hr-1">
+                            <li data-i18n="footer_contact_riyadh"><i class="fas fa-map-marker-alt"></i> الرياض ، المملكة
+                                العربية السعودية</li>
+                            <li data-i18n="footer_phone_riyadh"><i class="fas fa-phone"></i> 0112345678</li>
+                            <li data-i18n="footer_email_riyadh"><i class="fas fa-envelope"></i> riyadh@medical.com</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p data-i18n="head-name">© المنصة الطبية.</p>
+                    <p>© 2026 Designed By Emad Multimedia</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- نافذة تسجيل الدخول -->
+        <div class="modal" id="loginModal">
+            <div class="modal-content">
+                <button class="close-modal" id="closeModal">&times;</button>
+                <h2 data-i18n="login_title">تسجيل الدخول</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label data-i18n="login_username" for="username">اسم المستخدم</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="login_password" for="password">كلمة المرور</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button data-i18n="login_btn" type="submit" class="btn btn-primary btn-block">تسجيل الدخول</button>
+                    <p data-i18n="login_signup" class="form-footer">ليس لديك حساب؟ <a href="register.html">سجل الآن</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+        </div>
+        </footer>
+
+        <script src="js/data.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/services.js"></script>
+
+        <script>
+            // تهيئة القائمة المتحركة
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuToggle = document.getElementById('menuToggle');
+                const navLinks = document.getElementById('navLinks');
+
+                if (menuToggle && navLinks) {
+                    menuToggle.addEventListener('click', function () {
+                        navLinks.classList.toggle('active');
+                        menuToggle.innerHTML = navLinks.classList.contains('active')
+                            ? '<i class="fas fa-times"></i>'
+                            : '<i class="fas fa-bars"></i>';
+                    });
+                }
+
+                // تهيئة صفحة الخدمات
+                initializeServicesPage();
+            });
+        </script>
+
+        <script src="lang.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,21 @@
+id: 1,
+            username: 'admin',
+            email: 'admin@medical.com',
+            password: 'admin123',
+            fullName: 'مدير النظام',
+            role: 'admin'
+
+id: 2,
+            username: 'doctor',
+            email: 'doctor@medical.com',
+            password: 'doctor123',
+            fullName: 'د. أحمد محمد',
+            role: 'doctor'
+
+id: 3,
+            username: 'patient',
+            email: 'patient@medical.com',
+            password: 'patient123',
+            fullName: 'محمد أحمد',
+            role: 'patient'
+

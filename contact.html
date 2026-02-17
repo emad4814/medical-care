@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - المنصة الطبية المتكاملة</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lang.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- شريط التنقل -->
+
+    <body class="page-home">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-stethoscope"></i>
+                    <span data-i18n="head-name">المنصة الطبية</span>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" data-i18n="nav_home"><i class="fas fa-home"></i> الرئيسية</a>
+                    </li>
+                    <li><a href="about.html" data-i18n="nav_about"><i class="fas fa-info-circle"></i> عن المنصة</a></li>
+                    <li><a href="services.html" data-i18n="nav_services"><i class="fas fa-concierge-bell"></i>
+                            الخدمات</a>
+                    </li>
+                    <li><a href="contact.html" data-i18n="nav_contact"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                    <li><a href="login.html" class="btn-login" data-i18n="nav_login"><i class="fas fa-sign-in-alt"></i>
+                            تسجيل الدخول</a></li>
+                </ul>
+                <div class="lang-dropdown">
+                    <button class="lang-btn">
+                        🌐 <span id="current-lang">AR</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <ul class="lang-menu">
+                        <li onclick="setLanguage('ar')">🇪🇬 العربية</li>
+                        <li onclick="setLanguage('en')">🇺🇸 English</li>
+                        <li onclick="setLanguage('fr')">🇫🇷 Français</li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+        </nav>
+
+
+        <div class="contact-page">
+
+            <!-- الهيدر -->
+            <header class="contact-header">
+                <h1 data-i18n="contact-title">اتصل بنا</h1>
+                <p data-i18n="contact-subtitle-1">
+                    نحن هنا لمساعدتك! تواصل مع فريق المنصة الطبية المتكاملة عبر القنوات التالية
+                </p>
+                <p data-i18n="contact-subtitle-2">
+                    نعمل على مدار الساعة لتقديم أفضل خدمة للمرضى والأطباء والمؤسسات الصحية
+                </p>
+            </header>
+
+            <!-- قسم المقرات -->
+            <section class="offices-section">
+
+                <!-- القاهرة -->
+                <div class="office-card cairo">
+                    <div class="office-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h2 data-i18n="office-cairo-title">
+                        <i class="fas fa-map-marker-alt"></i> المقر الرئيسي - القاهرة
+                    </h2>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-pin"></i>
+                            <div>
+                                <h4 data-i18n="label-address">العنوان</h4>
+                                <p data-i18n="cairo-address">
+                                    شارع العروبة، الحي السابع، مدينة نصر، القاهرة، مصر
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4 data-i18n="label-phone">هاتف المؤسسة</h4>
+                                <p><a href="tel:+20223456789">+20 223 456 789</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div>
+                                <h4 data-i18n="label-support">الدعم الفني</h4>
+                                <p><a href="tel:+201234567890">+20 123 456 7890</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4 data-i18n="label-email">البريد الإلكتروني</h4>
+                                <p><a href="mailto:cairo@medical.com">cairo@medicalplatform.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-fax"></i>
+                            <div>
+                                <h4 data-i18n="label-fax">الفاكس</h4>
+                                <p>+20 223 456 788</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الرياض -->
+                <div class="office-card riyadh">
+                    <div class="office-icon">
+                        <i class="fas fa-clinic-medical"></i>
+                    </div>
+                    <h2 data-i18n="office-riyadh-title">
+                        <i class="fas fa-map-marker-alt"></i> المقر الإقليمي - الرياض
+                    </h2>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-pin"></i>
+                            <div>
+                                <h4 data-i18n="label-address">العنوان</h4>
+                                <p data-i18n="riyadh-address">
+                                    حي الملقا، طريق الملك فهد، الرياض، المملكة العربية السعودية
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ساعات العمل -->
+            <section class="working-hours">
+                <h2 data-i18n="working-hours-title">
+                    <i class="far fa-clock"></i> ساعات العمل
+                </h2>
+
+                <div class="hours-grid">
+                    <div class="hour-item">
+                        <h4 data-i18n="hours-sun-thu">الأحد - الخميس</h4>
+                        <p data-i18n="hours-sun-thu-time">٨:٠٠ ص - ٨:٠٠ م</p>
+                    </div>
+
+                    <div class="hour-item">
+                        <h4 data-i18n="hours-friday">الجمعة</h4>
+                        <p data-i18n="hours-friday-time">١٠:٠٠ ص - ٦:٠٠ م</p>
+                    </div>
+
+                    <div class="hour-item">
+                        <h4 data-i18n="hours-saturday">السبت</h4>
+                        <p data-i18n="hours-saturday-time">١٠:٠٠ ص - ٤:٠٠ م</p>
+                    </div>
+
+                    <div class="hour-item">
+                        <h4 data-i18n="hours-support">الدعم الفني</h4>
+                        <p data-i18n="hours-support-time">٢٤ ساعة / ٧ أيام</p>
+                    </div>
+                </div>
+
+                <div class="emergency-note">
+                    <h4 data-i18n="emergency-title">
+                        <i class="fas fa-exclamation-triangle"></i> ملاحظة هامة
+                    </h4>
+                    <p data-i18n="emergency-text">
+                        لدينا فريق دعم فني يعمل على مدار الساعة طوال أيام الأسبوع لحالات الطوارئ الفنية في المنصة.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- الفوتر -->
+        <!-- <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>المنصة الطبية</h3>
+                        <p>منصة رائدة في تقديم الخدمات الطبية الإلكترونية، نسعى لتوفير أفضل تجربة رعاية صحية للمرضى.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="about.html">عن المنصة</a></li>
+                            <li><a href="services.html">الخدمات</a></li>
+                            <li><a href="contact.html">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>الخدمات</h3>
+                        <ul>
+                            <li><a href="services.html">حجز المواعيد</a></li>
+                            <li><a href="services.html">استشارات عن بعد</a></li>
+                            <li><a href="services.html">الكشف المنزلي</a></li>
+                            <li><a href="services.html">تحاليل طبية</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>معلومات الاتصال</h3>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> القاهرة ، جمهورية مصر العربية</li>
+                            <li><i class="fas fa-phone"></i> 010123456789</li>
+                            <li><i class="fas fa-envelope"></i> info@medical-egycare.com</li>
+                            <hr class="hr-1">
+                            <li><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</li>
+                            <li><i class="fas fa-phone"></i> 0112345678</li>
+                            <li><i class="fas fa-envelope"></i> info@medical-ksacare.com</li>
+
+                        </ul>
+                    </div>
+                </div> -->
+
+        <div class="footer-bottom">
+            <p data-i18n="head-name">© المنصة الطبية.</p>
+            <p>© 2026 Designed By Emad Multimedia</p>
+        </div>
+        </div>
+        </footer>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/services.js"></script>
+
+        <script>
+            // تهيئة القائمة المتحركة
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuToggle = document.getElementById('menuToggle');
+                const navLinks = document.getElementById('navLinks');
+
+                if (menuToggle && navLinks) {
+                    menuToggle.addEventListener('click', function () {
+                        navLinks.classList.toggle('active');
+                        menuToggle.innerHTML = navLinks.classList.contains('active')
+                            ? '<i class="fas fa-times"></i>'
+                            : '<i class="fas fa-bars"></i>';
+                    });
+                }
+
+                // تهيئة صفحة الخدمات
+                initializeServicesPage();
+            });
+        </script>
+
+        <script>
+            // جافا سكريبت بسيط للنموذج
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // هنا يمكنك إضافة كود إرسال النموذج إلى الخادم
+                // لأغراض العرض، سنعرض رسالة تأكيد فقط
+
+                const formData = new FormData(this);
+                const name = formData.get('name');
+
+                alert(`شكراً ${name}! تم استلام رسالتك بنجاح. سنقوم بالرد عليك خلال 24 ساعة عمل.`);
+
+                // إعادة تعيين النموذج
+                this.reset();
+            });
+
+            // تحديد البلد تلقائياً بناءً على رقم الهاتف
+            document.getElementById('phone').addEventListener('input', function (e) {
+                const phone = e.target.value;
+                const countrySelect = document.getElementById('country');
+
+                if (phone.includes('+20') || phone.includes('0020')) {
+                    countrySelect.value = 'egypt';
+                } else if (phone.includes('+966') || phone.includes('00966')) {
+                    countrySelect.value = 'saudi';
+                } else if (phone.includes('+971') || phone.includes('00971')) {
+                    countrySelect.value = 'uae';
+                }
+            });
+        </script>
+        <script src="lang.js"></script>
+    </body>
+
+</html>

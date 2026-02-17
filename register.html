@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب جديد - المنصة الطبية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/lang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- شريط التنقل -->
+
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-stethoscope"></i>
+                <span data-i18n="head-name">المنصة الطبية</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" data-i18n="nav_home"><i class="fas fa-home"></i>
+                        الرئيسية</a>
+                </li>
+                <li><a href="about.html" data-i18n="nav_about"><i class="fas fa-info-circle"></i> عن المنصة</a></li>
+                <li><a href="services.html" data-i18n="nav_services"><i class="fas fa-concierge-bell"></i>
+                        الخدمات</a>
+                </li>
+                <li><a href="contact.html" data-i18n="nav_contact"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                <li><a href="login.html" class="btn-login" data-i18n="nav_login"><i class="fas fa-sign-in-alt"></i>
+                        تسجيل الدخول</a></li>
+            </ul>
+            <div class="lang-dropdown">
+                <button class="lang-btn">
+                    🌐 <span id="current-lang">AR</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+
+                <ul class="lang-menu">
+                    <li onclick="setLanguage('ar')">🇪🇬 العربية</li>
+                    <li onclick="setLanguage('en')">🇺🇸 English</li>
+                    <li onclick="setLanguage('fr')">🇫🇷 Français</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </nav>
+
+
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+
+                <!-- الهيدر -->
+                <div class="auth-header">
+                    <h1 data-i18n="register-title">إنشاء حساب جديد</h1>
+                    <p data-i18n="register-subtitle">
+                        انضم إلى منصتنا الطبية واستفد من جميع خدماتنا المميزة
+                    </p>
+                </div>
+
+                <!-- خطوات التسجيل -->
+                <div class="registration-steps">
+                    <div class="step active" id="step1">
+                        <div class="step-number">1</div>
+                        <span data-i18n="step-personal-info">المعلومات الشخصية</span>
+                    </div>
+                    <div class="step" id="step2">
+                        <div class="step-number">2</div>
+                        <span data-i18n="step-medical-info">المعلومات الطبية</span>
+                    </div>
+                    <div class="step" id="step3">
+                        <div class="step-number">3</div>
+                        <span data-i18n="step-confirm-account">تأكيد الحساب</span>
+                    </div>
+                </div>
+
+                <!-- النموذج -->
+                <form id="registerForm" class="auth-form">
+
+                    <!-- الخطوة 1: المعلومات الشخصية -->
+                    <div id="step1Content" class="step-content active">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" data-i18n="first-name-label">الاسم الأول *</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="firstName" name="firstName" required
+                                        data-i18n-placeholder="first-name-placeholder" placeholder="أدخل الاسم الأول"
+                                        data-i18n-title="first-name-tooltip"
+                                        title="الاسم الكامل كما هو في بطاقة الهوية">
+                                </div>
+                                <div class="error-message" id="firstNameError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName" data-i18n="last-name-label">اسم العائلة *</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="lastName" name="lastName" required
+                                        data-i18n-placeholder="last-name-placeholder" placeholder="أدخل اسم العائلة"
+                                        data-i18n-title="last-name-tooltip" title="اسم العائلة كما هو في بطاقة الهوية">
+                                </div>
+                                <div class="error-message" id="lastNameError"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" data-i18n="email-label">البريد الإلكتروني *</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" name="email" required
+                                    data-i18n-placeholder="email-placeholder" placeholder="example@email.com"
+                                    data-i18n-title="email-tooltip" title="أدخل بريدك الإلكتروني">
+                            </div>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" data-i18n="phone-label">رقم الهاتف *</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" id="phone" name="phone" required
+                                    data-i18n-placeholder="phone-placeholder" placeholder="0XXXXXXXXX"
+                                    data-i18n-title="phone-tooltip" title="أدخل رقم الهاتف مع رمز الدولة">
+                            </div>
+                            <div class="error-message" id="phoneError"></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password" data-i18n="password-label">كلمة المرور *</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="password" name="password" required
+                                        data-i18n-placeholder="password-placeholder" placeholder="كلمة مرور قوية"
+                                        data-i18n-title="password-tooltip"
+                                        title="كلمة مرور قوية تحتوي على أحرف وأرقام ورموز">
+                                    <button type="button" class="toggle-password" data-target="password"
+                                        data-i18n-title="toggle-password-tooltip" title="عرض أو إخفاء كلمة المرور">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-strength" id="passwordStrength">
+                                    <div class="strength-bar"></div>
+                                    <span class="strength-text" data-i18n="password-strength-text">
+                                        قوة كلمة المرور: ضعيفة
+                                    </span>
+                                </div>
+                                <div class="error-message" id="passwordError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirmPassword" data-i18n="confirm-password-label">تأكيد كلمة المرور
+                                    *</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="confirmPassword" name="confirmPassword" required
+                                        data-i18n-placeholder="confirm-password-placeholder"
+                                        placeholder="أعد إدخال كلمة المرور" data-i18n-title="confirm-password-tooltip"
+                                        title="أعد كتابة كلمة المرور للتأكيد">
+                                    <button type="button" class="toggle-password" data-target="confirmPassword"
+                                        data-i18n-title="toggle-password-tooltip" title="عرض أو إخفاء كلمة المرور">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="error-message" id="confirmPasswordError"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dateOfBirth" data-i18n="dob-label">تاريخ الميلاد *</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-calendar"></i>
+                                <input type="date" id="dateOfBirth" name="dateOfBirth" required max="2006-01-01"
+                                    data-i18n-title="dob-tooltip" title="اختر تاريخ ميلادك">
+                            </div>
+                            <div class="error-message" id="dateOfBirthError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-i18n="gender-label">الجنس *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="male" required>
+                                    <span class="radio-custom"></span>
+                                    <span data-i18n="gender-male">ذكر</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="female">
+                                    <span class="radio-custom"></span>
+                                    <span data-i18n="gender-female">أنثى</span>
+                                </label>
+                            </div>
+                            <div class="error-message" id="genderError"></div>
+                        </div>
+
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-secondary" data-i18n="back-login-btn">العودة لتسجيل
+                                الدخول</button>
+                            <button type="button" class="btn btn-primary" id="nextToStep2"
+                                data-i18n="next-btn">التالي</button>
+                        </div>
+                    </div>
+
+                    <!-- الخطوة 2: المعلومات الطبية -->
+                    <div id="step2Content" class="step-content">
+                        <div class="form-group">
+                            <label for="bloodType" data-i18n="blood-type-label">فصيلة الدم</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-tint"></i>
+                                <select id="bloodType" name="bloodType" data-i18n-title="blood-type-tooltip"
+                                    title="اختر فصيلة دمك">
+                                    <option value="" data-i18n="blood-type-placeholder">اختر فصيلة الدم</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                    <option value="unknown" data-i18n="unknown">غير معروف</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="height" data-i18n="height-label">الطول (سم)</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-ruler-vertical"></i>
+                                <input type="number" id="height" name="height" min="100" max="250"
+                                    data-i18n-placeholder="height-placeholder" placeholder="أدخل الطول بالسنتيمتر"
+                                    data-i18n-title="height-tooltip" title="الطول بالسنتيمتر">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="weight" data-i18n="weight-label">الوزن (كجم)</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-weight"></i>
+                                <input type="number" id="weight" name="weight" min="30" max="300"
+                                    data-i18n-placeholder="weight-placeholder" placeholder="أدخل الوزن بالكيلوجرام"
+                                    data-i18n-title="weight-tooltip" title="الوزن بالكيلوجرام">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="chronicDiseases" data-i18n="chronic-diseases-label">الأمراض المزمنة (إن
+                                وجدت)</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-file-medical"></i>
+                                <textarea id="chronicDiseases" name="chronicDiseases" rows="3"
+                                    data-i18n-placeholder="chronic-diseases-placeholder"
+                                    placeholder="اذكر أي أمراض مزمنة مثل: السكري، الضغط، الربو..."
+                                    data-i18n-title="chronic-diseases-tooltip"
+                                    title="الأمراض المزمنة التي تعاني منها"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="allergies" data-i18n="allergies-label">الحساسية (إن وجدت)</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-allergies"></i>
+                                <textarea id="allergies" name="allergies" rows="2"
+                                    data-i18n-placeholder="allergies-placeholder"
+                                    placeholder="اذكر أي حساسية مثل: البنسلين، الغبار، بعض الأطعمة..."
+                                    data-i18n-title="allergies-tooltip" title="الحساسية التي تعاني منها"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="insuranceCompany" data-i18n="insurance-label">شركة التأمين</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-shield-alt"></i>
+                                <select id="insuranceCompany" name="insuranceCompany"
+                                    data-i18n-title="insurance-tooltip" title="اختر شركة التأمين الخاصة بك">
+                                    <option value="" data-i18n="insurance-placeholder">اختر شركة التأمين</option>
+                                    <option value="bupa">بوبا العربية</option>
+                                    <option value="medgulf">المدينة الطبية</option>
+                                    <option value="tawuniya">التعاونية</option>
+                                    <option value="axa">أكسا</option>
+                                    <option value="none" data-i18n="no-insurance">لا يوجد تأمين</option>
+                                    <option value="other" data-i18n="other">أخرى</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="insuranceNumberGroup" style="display: none;">
+                            <label for="insuranceNumber" data-i18n="insurance-number-label">رقم بطاقة التأمين</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-id-card"></i>
+                                <input type="text" id="insuranceNumber" name="insuranceNumber"
+                                    data-i18n-placeholder="insurance-number-placeholder"
+                                    placeholder="أدخل رقم بطاقة التأمين" data-i18n-title="insurance-number-tooltip"
+                                    title="رقم بطاقة التأمين الخاصة بك">
+                            </div>
+                        </div>
+
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-secondary" id="backToStep1"
+                                data-i18n="back-btn">السابق</button>
+                            <button type="button" class="btn btn-primary" id="nextToStep3"
+                                data-i18n="next-btn">التالي</button>
+                        </div>
+                    </div>
+
+                    <!-- الخطوة 3: تأكيد الحساب -->
+                    <div id="step3Content" class="step-content">
+                        <div class="confirmation-section">
+                            <div class="confirmation-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+
+                            <h3 data-i18n="confirm-title">تأكيد المعلومات</h3>
+                            <p data-i18n="confirm-subtitle">يرجى مراجعة المعلومات التالية قبل إنشاء الحساب:</p>
+
+                            <div class="confirmation-details">
+                                <div class="detail-item">
+                                    <span class="detail-label" data-i18n="full-name-label">الاسم الكامل:</span>
+                                    <span class="detail-value" id="confirmFullName"></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label" data-i18n="email-label">البريد الإلكتروني:</span>
+                                    <span class="detail-value" id="confirmEmail"></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label" data-i18n="phone-label">رقم الهاتف:</span>
+                                    <span class="detail-value" id="confirmPhone"></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label" data-i18n="dob-label">تاريخ الميلاد:</span>
+                                    <span class="detail-value" id="confirmBirthDate"></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label" data-i18n="gender-label">الجنس:</span>
+                                    <span class="detail-value" id="confirmGender"></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label" data-i18n="blood-type-label">فصيلة الدم:</span>
+                                    <span class="detail-value" id="confirmBloodType"></span>
+                                </div>
+                            </div>
+
+                            <div class="terms-agreement">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="agreeTerms" required>
+                                    <span class="checkmark"></span>
+                                    <span data-i18n="terms-text">
+                                        أوافق على <a href="terms.html" target="_blank">شروط الاستخدام</a> و
+                                        <a href="privacy.html" target="_blank">سياسة الخصوصية</a> للمنصة الطبية
+                                    </span>
+                                </label>
+                                <div class="error-message" id="termsError"></div>
+                            </div>
+
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-secondary" id="backToStep2"
+                                    data-i18n="back-btn">السابق</button>
+                                <button type="submit" class="btn btn-success" id="createAccountBtn"
+                                    data-i18n="create-account-btn">
+                                    إنشاء الحساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p data-i18n="head-name">© المنصة الطبية.</p>
+                <p>© 2026 Designed By Emad Multimedia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- نافذة التأكيد -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>تم إنشاء الحساب بنجاح!</h3>
+                <p id="successMessage">تم إنشاء حسابك بنجاح. يمكنك الآن تسجيل الدخول للاستفادة من خدماتنا.</p>
+                <div class="modal-actions">
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="fas fa-sign-in-alt"></i> تسجيل الدخول الآن
+                    </a>
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fas fa-home"></i> العودة للرئيسية
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/register.js"></script>
+    <script>
+        // تهيئة القائمة المتحركة
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function () {
+                    navLinks.classList.toggle('active');
+                    menuToggle.innerHTML = navLinks.classList.contains('active')
+                        ? '<i class="fas fa-times"></i>'
+                        : '<i class="fas fa-bars"></i>';
+                });
+            }
+
+            // التحقق من وجود مستخدم مسجل بالفعل
+            const storedUser = localStorage.getItem('medicalPlatformUser');
+            if (storedUser) {
+                window.location.href = 'dashboard.html';
+            }
+
+            // تعيين الحد الأدنى للتاريخ (يجب أن يكون المستخدم عمره 18 سنة على الأقل)
+            const today = new Date();
+            const minDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+            document.getElementById('dateOfBirth').max = minDate.toISOString().split('T')[0];
+        });
+    </script>
+    <script src="lang.js"></script>
+</body>
+
+</html>

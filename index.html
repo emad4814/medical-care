@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنصة الطبية - الصحة في متناول يديك</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- شريط التنقل -->
+
+    <body class="page-home">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-stethoscope"></i>
+                    <span data-i18n="head-name">المنصة الطبية</span>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" data-i18n="nav_home"><i class="fas fa-home"></i> الرئيسية</a>
+                    </li>
+                    <li><a href="about.html" data-i18n="nav_about"><i class="fas fa-info-circle"></i> عن المنصة</a></li>
+                    <li><a href="services.html" data-i18n="nav_services"><i class="fas fa-concierge-bell"></i>
+                            الخدمات</a>
+                    </li>
+                    <li><a href="contact.html" data-i18n="nav_contact"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                    <li><a href="login.html" class="btn-login" data-i18n="nav_login"><i class="fas fa-sign-in-alt"></i>
+                            تسجيل الدخول</a></li>
+                </ul>
+                <div class="lang-dropdown">
+                    <button class="lang-btn">
+                        🌐 <span id="current-lang">AR</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <ul class="lang-menu">
+                        <li onclick="setLanguage('ar')">🇪🇬 العربية</li>
+                        <li onclick="setLanguage('en')">🇺🇸 English</li>
+                        <li onclick="setLanguage('fr')">🇫🇷 Français</li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+        </nav>
+
+        <!-- hero section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-i18n="hero_title">الرعاية الصحية المثالية في متناول يديك</h1>
+                    <p data-i18n="hero_desc">نوفر لك أفضل الخدمات الطبية مع أطباء متخصصين وعيادات مجهزة بأحدث التقنيات
+                        الطبية</p>
+                    <div class="hero-buttons">
+                        <a href="#departments" data-i18n="btn_discover" class="btn btn-primary">اكتشف خدماتنا</a>
+                        <a href="login.html" data-i18n="btn_book" class="btn btn-secondary">احجز موعد الآن</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/--14414.jpg" alt="الرعاية الصحية">
+                </div>
+            </div>
+        </section>
+
+        <!-- Why choose us -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title" data-i18n="why_title">لماذا تختار منصتنا؟</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 data-i18n="feature_easy_booking">حجز مواعيد سهل</h3>
+                        <p data-i18n="feature_easy_booking_desc">احجز موعدك مع أفضل الأطباء في أي وقت ومن أي مكان</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 data-i18n="feature_clinics">عيادات متعددة</h3>
+                        <p data-i18n="feature_clinics_desc">شبكة واسعة من العيادات المتعاقدة في مختلف المدن</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3 data-i18n="feature_certified_doctors">أطباء معتمدون</h3>
+                        <p data-i18n="feature_certified_doctors_desc">فريق من الأطباء المتخصصين والحاصلين على أعلى
+                            الشهادات
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 data-i18n="feature_support">دعم فني 24/7</h3>
+                        <p data-i18n="feature_support_desc">خدمة عملاء متاحة على مدار الساعة لمساعدتك في أي استفسار</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Medical Sections -->
+        <section class="departments" id="departments">
+            <div class="container">
+                <h2 data-i18n="services_title" class="section-title">الأقسام الطبية</h2>
+                <div class="departments-grid">
+
+                    <!-- قسم القلب -->
+                    <div class="department-card">
+                        <div class="department-header">
+                            <div class="department-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3 data-i18n="dept_heart">قسم القلب</h3>
+                            <p data-i18n="dept_heart_desc">تشخيص وعلاج أمراض القلب والأوعية الدموية</p>
+                        </div>
+                        <div class="department-body">
+                            <div class="department-info">
+                                <span data-i18n="doctors-count" class="doctors-count">12 طبيب</span>
+                                <span data-i18n="status-active" class="status-badge active">نشط</span>
+                            </div>
+                            <div class="department-action">
+                                <a href="services.html?department=cardiology" data-i18n="btn_book_dept"
+                                    class="btn btn-primary">
+                                    <i data-i18n="btn_book_icon" class="fas fa-calendar-alt"></i> احجز موعد
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- قسم العظام -->
+                    <div class="department-card">
+                        <div class="department-header">
+                            <div class="department-icon">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                            <h3 data-i18n="dept_orthopedics">قسم العظام</h3>
+                            <p data-i18n="dept_orthopedics_desc">علاج الكسور ومشاكل المفاصل والعمود الفقري</p>
+                        </div>
+                        <div class="department-body">
+                            <div class="department-info">
+                                <span data-i18n="doctors-count" class="doctors-count">9 أطباء</span>
+                                <span data-i18n="status-active" class="status-badge active">نشط</span>
+                            </div>
+                            <div class="department-action">
+                                <a href="services.html?department=orthopedics" data-i18n="btn_book_dept"
+                                    class="btn btn-primary">
+                                    <i data-i18n="btn_book_icon" class="fas fa-calendar-alt"></i> احجز موعد
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- قسم الأطفال -->
+                    <div class="department-card">
+                        <div class="department-header">
+                            <div class="department-icon">
+                                <i class="fas fa-baby"></i>
+                            </div>
+                            <h3 data-i18n="dept_pediatrics">قسم الأطفال</h3>
+                            <p data-i18n="dept_pediatrics_desc">رعاية صحيةpمتكاملة للأطفال وحديثي الولادة</p>
+                        </div>
+                        <div class="department-body">
+                            <div class="department-info">
+                                <span data-i18n="doctors-count" class="doctors-count">7 أطباء</span>
+                                <span data-i18n="status-active" class="status-badge active">نشط</span>
+                            </div>
+                            <div class="department-action">
+                                <a href="services.html?department=pediatrics" data-i18n="btn_book_dept"
+                                    class="btn btn-primary">
+                                    <i data-i18n="btn_book_icon" class="fas fa-calendar-alt"></i> احجز موعد
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- قسم الجلدية -->
+                    <div class="department-card">
+                        <div class="department-header">
+                            <div class="department-icon">
+                                <i class="fas fa-allergies"></i>
+                            </div>
+                            <h3 data-i18n="dept_dermatology">قسم الجلدية</h3>
+                            <p data-i18n="dept_dermatology_desc">تشخيص وعلاج أمراض الجلد والشعر</p>
+                        </div>
+                        <div class="department-body">
+                            <div class="department-info">
+                                <span data-i18n="doctors-count" class="doctors-count">7 أطباء</span>
+                                <span data-i18n="status-non-active" class="status-badge inactive">غير نشط</span>
+                            </div>
+                            <div class="department-action">
+                                <a href="services.html?department=dermatology" data-i18n="btn_book_dept"
+                                    class="btn btn-primary">
+                                    <i data-i18n="btn_book_icon" class="fas fa-calendar-alt"></i> احجز موعد
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- قسم العيون -->
+                    <div class="department-card">
+                        <div class="department-header">
+                            <div class="department-icon">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <h3 data-i18n="dept_eyes">قسم العيــون</h3>
+                            <p data-i18n="dept_eyes_desc">تشخيص وعلاج أمراض العيون و الليزك</p>
+                        </div>
+                        <div class="department-body">
+                            <div class="department-info">
+                                <span data-i18n="doctors-count" class="doctors-count">3 أطباء</span>
+                                <span data-i18n="status-non-active" class="status-badge inactive">غير نشط</span>
+                            </div>
+                            <div class="department-action">
+                                <a href="services.html?department=eyes" data-i18n="btn_book_dept"
+                                    class="btn btn-primary">
+                                    <i data-i18n="btn_book_icon" class="fas fa-calendar-alt"></i> احجز موعد
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- قسم الباطنـة -->
+                    <div class="department-card">
+                        <div class="department-header">
+                            <div class="department-icon">
+                                <i class="fa-solid fa-stethoscope"></i>
+                            </div>
+                            <h3 data-i18n="dept_internal">قسم امراض الباطنة</h3>
+                            <p data-i18n="dept_internal_desc">تشخيص وعلاج أمراض الباطنة</p>
+                        </div>
+                        <div class="department-body">
+                            <div class="department-info">
+                                <span data-i18n="doctors-count" class="doctors-count">5 أطباء</span>
+                                <span data-i18n="status-non-active" class="status-badge inactive">غير نشط</span>
+                            </div>
+                            <div class="department-action">
+                                <a href="services.html?department=internal" data-i18n="btn_book_dept"
+                                    class="btn btn-primary">
+                                    <i data-i18n="btn_book_icon" class="fas fa-calendar-alt"></i> احجز موعد
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- قسم الإحصائيات -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <i class="fas fa-hospital"></i>
+                        <h3 id="clinicsCount">0</h3>
+                        <p data-i18n="stat_clinics">عيادة متعاقدة</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-user-md"></i>
+                        <h3 id="doctorsCount">0</h3>
+                        <p data-i18n="stat_doctors">طبيب متخصص</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-user-check"></i>
+                        <h3 id="patientsCount">0</h3>
+                        <p data-i18n="stat_patients">مريض راضٍ</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3 id="appointmentsCount">0</h3>
+                        <p data-i18n="stat_appointments">حجز شهري</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الاتصال السريع -->
+        <section class="quick-contact">
+            <div class="container">
+                <div class="contact-content">
+                    <h2 data-i18n="contact_title">هل تحتاج مساعدة؟</h2>
+                    <p data-i18n="contact_desc">فريق الدعم الفني متاح على مدار الساعة للإجابة على استفساراتك</p>
+                    <a href="contact.html" data-i18n="btn_contact_now" class="btn btn-primary">
+                        <i class="fas fa-phone-alt"></i> اتصل بنا الآن
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- الفوتر -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3 data-i18n="footer_about_title">المنصة الطبية</h3>
+                        <p data-i18n="footer_about_desc">منصة رائدة في تقديم الخدمات الطبية الإلكترونية، نسعى لتوفير
+                            أفضل
+                            تجربة
+                            رعاية صحية للمرضى.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3 data-i18n="footer_quick_links">روابط سريعة</h3>
+                        <ul>
+                            <li><a href="index.html" data-i18n="nav_home">الرئيسية</a></li>
+                            <li><a href="about.html" data-i18n="nav_about">عن المنصة</a></li>
+                            <li><a href="services.html" data-i18n="nav_services">الخدمات</a></li>
+                            <li><a href="contact.html" data-i18n="nav_contact">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3 data-i18n="footer_services">الخدمات</h3>
+                        <ul>
+                            <li><a href="services.html" data-i18n="footer_service_booking">حجز المواعيد</a></li>
+                            <li><a href="services.html" data-i18n="footer_service_consultation">استشارات عن بعد</a></li>
+                            <li><a href="services.html" data-i18n="footer_service_home_visit">الكشف المنزلي</a></li>
+                            <li><a href="services.html" data-i18n="footer_service_labs">تحاليل طبية</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3 data-i18n="footer_contact_info">معلومات الاتصال</h3>
+                        <ul class="contact-info">
+                            <li data-i18n="footer_contact_cairo"><i class="fas fa-map-marker-alt"></i> القاهرة ، جمهورية
+                                مصر
+                                العربية</li>
+                            <li data-i18n="footer_phone_cairo"><i class="fas fa-phone"></i> 010123456789</li>
+                            <li data-i18n="footer_email_cairo"><i class="fas fa-envelope"></i> cairo@medical.com</li>
+                            <hr class="hr-1">
+                            <li data-i18n="footer_contact_riyadh"><i class="fas fa-map-marker-alt"></i> الرياض ، المملكة
+                                العربية السعودية</li>
+                            <li data-i18n="footer_phone_riyadh"><i class="fas fa-phone"></i> 0112345678</li>
+                            <li data-i18n="footer_email_riyadh"><i class="fas fa-envelope"></i> riyadh@medical.com</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p data-i18n="head-name">© المنصة الطبية.</p>
+                    <p>© 2026 Designed By Emad Multimedia</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- نافذة تسجيل الدخول -->
+        <div class="modal" id="loginModal">
+            <div class="modal-content">
+                <button class="close-modal" id="closeModal">&times;</button>
+                <h2 data-i18n="login_title">تسجيل الدخول</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label data-i18n="login_username" for="username">اسم المستخدم</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="login_password" for="password">كلمة المرور</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button data-i18n="login_btn" type="submit" class="btn btn-primary btn-block">تسجيل الدخول</button>
+                    <p data-i18n="login_signup" class="form-footer">ليس لديك حساب؟ <a href="register.html">سجل الآن</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <script src="Js/jquery-3.7.1.min.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/services.js"></script>
+
+        <script>
+            // تهيئة القائمة المتحركة
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuToggle = document.getElementById('menuToggle');
+                const navLinks = document.getElementById('navLinks');
+
+                if (menuToggle && navLinks) {
+                    menuToggle.addEventListener('click', function () {
+                        navLinks.classList.toggle('active');
+                        menuToggle.innerHTML = navLinks.classList.contains('active')
+                            ? '<i class="fas fa-times"></i>'
+                            : '<i class="fas fa-bars"></i>';
+                    });
+                }
+
+                // تهيئة صفحة الخدمات
+                initializeServicesPage();
+            });
+        </script>
+
+
+        <script src="lang.js"></script>
+    </body>
+
+</html>
